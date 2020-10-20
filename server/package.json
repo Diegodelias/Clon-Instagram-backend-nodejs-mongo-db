@@ -1,0 +1,17 @@
+{
+  "name": "tp_seminario2_ifts16",
+  "version": "1.0.0",
+  "description": "tp de la materia seminario 2 del 3er año ifts 16",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Diego Delías Matías Mitre",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.8"
+  }
+}
