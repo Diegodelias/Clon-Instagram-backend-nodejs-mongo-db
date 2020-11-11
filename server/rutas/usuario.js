@@ -47,7 +47,7 @@ router.put('/seguir',requerirLogin,(req,res)=>{
             $push:{siguiendo:req.body.seguirId},
             
             
-        },{new:true}).then(resultado=>{
+        },{new:true}).select("-password").then(resultado=>{
             res.json(resultado)
 
         }).catch(err=>{
@@ -62,7 +62,7 @@ router.put('/seguir',requerirLogin,(req,res)=>{
 
 
 router.put('/dejarDeSeguir',requerirLogin,(req,res)=>{
-    Usuario.findByIdAndUpdate(req.body.dejarDeSeguir,{
+    Usuario.findByIdAndUpdate(req.body.dejarDeSeguirId,{
         $pull:{seguidores:req.usuario._id}
 
     },{
@@ -72,10 +72,10 @@ router.put('/dejarDeSeguir',requerirLogin,(req,res)=>{
             return res.status(422).json({error:err})
         }
         Usuario.findByIdAndUpdate(req.usuario._id,{
-            $pull:{siguiendo:req.body.dejarDeSeguir},
+            $pull:{siguiendo:req.body.dejarDeSeguirId},
             
             
-        },{new:true}).then(resultado=>{
+        },{new:true}).select("-password").then(resultado=>{
             res.json(resultado)
 
         }).catch(err=>{
@@ -97,7 +97,7 @@ router.put('/actualizaFoto',requerirLogin,(req,res)=>{
 })
 
 router.post('/buscar-usuarios',(req,res)=>{
-    let patron= new RegExp("^"+req.body.query)
+    let patron= new RegExp("^"+req.body.consulta)
     Usuario.find({email:{$regex:patron}})
     .select("_id email") //solo va seleccionar id e email
     .then(usuario=>{

@@ -5,11 +5,13 @@ const requerirLogin = require('../middleware/requerirLogin')
 const Post = mongoose.model("Post")
 
 
-router.get('/todosLosPosts',(req,res)=>{
+router.get('/todosLosPosts',requerirLogin,(req,res)=>{
     Post.find()
     //referencia al modelo de  usuario  a los datos de ese usuarios o sea qu devolvera nombre id y password
     .populate("posteadoPor", "_id nombre") //en el segundo valor determina que es lo que se quiere traer con el poppulate del usuario en este caso id y el nombre
-    .populate("comentarios.posteadoPor","id nombre")
+    .sort('-createdAt') //ordenado  descendente
+    
+    .populate("comentarios.posteadoPor","_id nombre")
     .then(posts=>{
         res.json({posts:posts})
     })
@@ -24,26 +26,13 @@ router.get('/todosLosPosts',(req,res)=>{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ////
 router.post('/crearpost',requerirLogin,(req,res)=>{
-    const {titulo, texto} = req.body //almacena titulo y body que viene del front
+    const {titulo, texto, foto} = req.body //almacena titulo y body que viene del front
     //si no trae nada
-    if(!titulo || !texto){
-      return  req.status(422).json({error:"Por favor rellenar todos lo campos"})
+    if(!titulo || !texto || !foto){
+      
+      return  res.status(422).json({error:"Por favor rellenar todos lo campos"})
     }
     //para no guardar password de usuario en la base de datos se define como undefined
     req.usuario.password = undefined
@@ -51,6 +40,7 @@ router.post('/crearpost',requerirLogin,(req,res)=>{
     const post = new Post({
         titulo:titulo,
         texto: texto,
+        foto:foto,
         posteadoPor: req.usuario //usuario viene de la que obtien  Usuario.findById el middleware requerirLogin
      })
     post.save().then(resultado=>{
@@ -137,14 +127,14 @@ router.put('/comentario',requerirLogin,(req,res)=>{
 router.delete('/borrarpost/:postId',requerirLogin,(req,res)=>{
     Post.findOne({_id:req.params.postId})
     .populate("posteadoPor","_id")
-    .exec((err,post)=>{
+    .exec((err,post)=>{ //ejecturar query
    
         if(err || !post){
             return res.status(422).json({error:err})
         }
         console.log(post.posteadoPor._id.toString())
         console.log( req.usuario._id.toString())
-        if(post.posteadoPor._id.toString() === req.usuario._id.toString()){
+        if(post.posteadoPor._id.toString() === req.usuario._id.toString()){ //pasarlo a string porque como objeto nunca serían iguales
             post.remove()
             .then(resultado=>{
                 res.json(resultado)
@@ -172,6 +162,7 @@ router.get('/subscribirPosts',requerirLogin,(req,res)=>{
     //referencia al modelo de  usuario  a los datos de ese usuarios o sea qu devolvera nombre id y password
     .populate("posteadoPor", "_id nombre") //en el segundo valor determina que es lo que se quiere traer con el poppulate del usuario en este caso id y el nombre
     .populate("comentarios.posteadoPor","_id nombre")
+    .sort('-createdAt') //ordenado  descendente
     .then(posts=>{
         res.json({posts:posts})
     })

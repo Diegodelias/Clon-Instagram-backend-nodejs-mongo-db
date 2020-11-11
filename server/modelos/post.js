@@ -13,7 +13,7 @@ const schemaPost = new mongoose.Schema({
     },
     foto:{
         type:String,
-        default:"sin foto"
+        required:true
     },
     meGusta:[{type:ObjectId,ref:"Usuario"}],
     comentarios:[{texto:String,posteadoPor:{type:ObjectId, ref:"Usuario"}
@@ -28,6 +28,6 @@ const schemaPost = new mongoose.Schema({
 
 
 
-})
+},{timestamps:true})
 
 mongoose.model("Post",schemaPost)

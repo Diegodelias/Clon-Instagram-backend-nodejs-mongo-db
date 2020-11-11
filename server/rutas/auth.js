@@ -29,7 +29,7 @@ router.post('/registro',(req,res)=>{
                         email,
                         password:passwordEncriptado,
                         nombre,
-                        foto
+                        foto:foto
                     
                     })
 
@@ -41,7 +41,7 @@ router.post('/registro',(req,res)=>{
 
                 usuario.save() //guardar nuevo usuario
                 .then(usuario =>{
-                    res.json({message:"Usuario salvado correctamente"})
+                    res.json({message:"Usuario creado correctamente"})
                 })
                 .catch(err=>{
                        console.log(err) 
@@ -86,6 +86,7 @@ router.post('/login',(req,res)=>{
                const {_id,nombre,email,seguidores,siguiendo,foto} = usuarioExiste
 
                res.json({token:token, usuario:{_id,nombre,email,seguidores,siguiendo,foto}})
+               console.log(token)
 
             }
             else {

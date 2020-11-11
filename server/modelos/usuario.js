@@ -12,11 +12,12 @@ const SchemaUsuario = new mongoose.Schema({
     },
     password:{
         type:String,
-        required:true
+        
     },
     foto:{
         type:String,
-        default:""
+        
+        default:"https://res.cloudinary.com/dkj7iqhfy/image/upload/v1604936478/noImage_beni7n.jpg"
 
     },
     seguidores:[{type:ObjectId,ref:"Usuario"}],

@@ -21,7 +21,7 @@ module.exports = (req,res,next)=>{
        //si la verificación fue exitosa
         const {_id} = payload  //destructuring _id del usuario  con el que se había genrado token (ruta login)
         //si encuentra usuario con ese id
-        Usuario.findById(_id).then(dataUsuario=>{
+        Usuario.findById(_id).then( dataUsuario=>{
             req.usuario = dataUsuario
             next()
         })
