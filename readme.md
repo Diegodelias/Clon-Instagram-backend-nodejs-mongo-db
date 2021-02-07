@@ -5,6 +5,8 @@ con texto y fotos. El sitio soporta la creación de varios perfiles de usuario.
 Link al proyecto alojado en Heroku: https://clonestagram-diegodelias.herokuapp.com
 
 Historias de usuario:
+
+
 -El usuario puede crear una cuenta y agregar su foto de perfil
 - El usuario puede crear post con fotos y texto
 - El usuario puede acceder a su perfil y ver un listado con todos sus posts y actualizar foto de
