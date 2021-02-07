@@ -31,7 +31,7 @@ Historias de usuario:
 - El usuario puede acceder a su perfil y ver un listado con todos sus posts y actualizar foto de
 perfil
 - El usuario puede acceder al perfil de otro usuario y ver todas todos los posts de este
--El usuario puede crear comentarios en los posts
+ - El usuario puede crear comentarios en los posts
 - El usuario puede dar like a un post
 - El usuario puede ver perfil de otros usuarios.
 -El usuario puede seguir a otro usuario
