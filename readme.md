@@ -1,11 +1,11 @@
 Para descargar y probar el proyecto:
-clonar repositorio https://github.com/Diegodelias/Clon-Instagram-backend-nodejs-mongo-db
+clonar el repositorio https://github.com/Diegodelias/Clon-Instagram-backend-nodejs-mongo-db
 instalar dependencias server. Desde terminal en carpeta server npm i
 instalar dependencias cliente. Desde terminal en carpeta cliente npm i.
 Arrancar server. En carpeta server desde terminal nodemon ejecutar nodemon dev
 Arrancar cliente. En carpeta cliente desde terminal npm start
 
-https://vimeo.com/483077863
+video explicativo del proyecto:https://vimeo.com/483077863
 
 
 
