@@ -10,8 +10,9 @@ Para descargar y probar el proyecto:
 
 -Arrancar cliente. En carpeta cliente desde terminal npm start
 
-video explicativo del proyecto:https://vimeo.com/483077863
-Link al proyecto alojado en Heroku: https://clonestagram-diegodelias.herokuapp.com
+-video explicativo del proyecto:https://vimeo.com/483077863
+
+-Link al proyecto alojado en Heroku: https://clonestagram-diegodelias.herokuapp.com
 
 
 
