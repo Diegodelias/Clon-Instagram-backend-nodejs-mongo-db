@@ -1,6 +1,18 @@
+Para descargar y probar el proyecto:
+clonar repositorio https://github.com/Diegodelias/Clon-Instagram-backend-nodejs-mongo-db
+instalar dependencias server. Desde terminal en carpeta server npm i
+instalar dependencias cliente. Desde terminal en carpeta cliente npm i.
+Arrancar server. En carpeta server desde terminal nodemon ejecutar nodemon dev
+Arrancar cliente. En carpeta cliente desde terminal npm start
+
+https://vimeo.com/483077863
+
+
 
 Se trata de una aplicación  web en que los usuarios pueden crear una cuenta, loguearse y crear posts
-con texto y fotos. El sitio soporta la creación de varios perfiles de usuario.
+con texto y fotos. El sitio soporta la creación de varios perfiles de usuario. El proyecto corresponde al 
+trabajo final de la materia Seminario 2 cursada en el intstituto de formación técnica superior(IFTS 16)
+correspondiente a la carrera de Técnico superior en analisis de sistemas.
 
 Link al proyecto alojado en Heroku: https://clonestagram-diegodelias.herokuapp.com
 
