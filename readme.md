@@ -18,7 +18,7 @@ Para descargar y probar el proyecto:
 
 Se trata de una aplicación  web en que los usuarios pueden crear una cuenta, loguearse y crear posts
 con texto y fotos. El sitio soporta la creación de varios perfiles de usuario. El proyecto corresponde al 
-trabajo final de la materia Seminario 2 cursada en el intstituto de formación técnica superior(IFTS 16)
+trabajo final de la materia Seminario 2 cursada en el instituto de formación técnica superior(IFTS 16)
 correspondiente a la carrera de Técnico superior en analisis de sistemas.
 
 
