@@ -31,3 +31,6 @@ perfil
 - En el perfil del usuario aparece un contador indicando cantidad de seguidores.
 - El usuario puede buscar el perfil de otro usuario ingresando mail del usuario en la barra de
 búsqueda del sitio
+
+
+![](fotos/3.jpg)
