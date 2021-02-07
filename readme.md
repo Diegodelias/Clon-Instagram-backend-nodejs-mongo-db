@@ -6,6 +6,7 @@ Arrancar server. En carpeta server desde terminal nodemon ejecutar nodemon dev
 Arrancar cliente. En carpeta cliente desde terminal npm start
 
 video explicativo del proyecto:https://vimeo.com/483077863
+Link al proyecto alojado en Heroku: https://clonestagram-diegodelias.herokuapp.com
 
 
 
@@ -14,7 +15,7 @@ con texto y fotos. El sitio soporta la creación de varios perfiles de usuario. 
 trabajo final de la materia Seminario 2 cursada en el intstituto de formación técnica superior(IFTS 16)
 correspondiente a la carrera de Técnico superior en analisis de sistemas.
 
-Link al proyecto alojado en Heroku: https://clonestagram-diegodelias.herokuapp.com
+
 
 Historias de usuario:
 
@@ -32,5 +33,7 @@ perfil
 - El usuario puede buscar el perfil de otro usuario ingresando mail del usuario en la barra de
 búsqueda del sitio
 
-
+![](fotos/1.jpg)
+![](fotos/2.jpg)
 ![](fotos/3.jpg)
+![](fotos/4.jpg)
